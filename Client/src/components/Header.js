@@ -4,17 +4,15 @@ import { useHistory, Link } from 'react-router-dom'
 import { SidebarContext } from '../context/SidebarContext'
 import { LOGOUT } from '../redux/actions/types'
 import {
-
   SearchIcon,
   MoonIcon,
   SunIcon,
   BellIcon,
   MenuIcon,
   OutlinePersonIcon,
-  OutlineCogIcon,
   OutlineLogoutIcon,
 } from '../icons'
-import { Badge, Input, Dropdown, DropdownItem, WindmillContext, Button } from '@windmill/react-ui'
+import { Badge, Input, Dropdown, DropdownItem, WindmillContext } from '@windmill/react-ui'
 
 function Header() {
   const dispatch = useDispatch();
@@ -28,8 +26,7 @@ function Header() {
 
 
   const history = useHistory();
-
-
+  const msgs = useSelector(state => state.msgs).length;
   const routeChange = (key) => {
     let newPath = `/app/result${key}`
     history.push(newPath);
@@ -65,10 +62,7 @@ function Header() {
               onChange={e => setKeyword(e.target.value)}
             />
             <div className="absolute inset-y-0 flex items-center pl-2">
-
               <SearchIcon onClick={() => { routeChange(keyword || "You must've missed something") }} className="w-4 h-4 " aria-hidden="false" />
-
-
             </div>
           </div>
         </div>
@@ -113,17 +107,11 @@ function Header() {
               isOpen={isNotificationsMenuOpen}
               onClose={() => setIsNotificationsMenuOpen(false)}
             >
-              <DropdownItem tag="a" href="#" className="justify-between">
+              <DropdownItem tag={Link} to='/app/chat' className="justify-between">
                 <span>Messages</span>
-                <Badge type="danger">13</Badge>
+                <Badge type="danger">{msgs}</Badge>
               </DropdownItem>
-              <DropdownItem tag="a" href="#" className="justify-between">
-                <span>Sales</span>
-                <Badge type="danger">2</Badge>
-              </DropdownItem>
-              <DropdownItem onClick={() => alert('Alerts!')}>
-                <span>Alerts</span>
-              </DropdownItem>
+
             </Dropdown>
           </li>
           {/* <!-- Profile menu --> */}
