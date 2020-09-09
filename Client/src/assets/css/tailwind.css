@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.font-andika {
+    font-family: 'Andika', sans-serif;
+}
+
+.font-contrail {
+    font-family: 'Contrail One', cursive;
+}
+
+.font-concert {
+    font-family: 'Concert One', cursive;
+}
+
+.font-Inconsolata {
+    font-family: 'Inconsolata', monospace;
+}
+
+.font-script {
+    font-family: 'Nanum Pen Script', cursive;
+}
+
+.h-screen-2 {
+    height: 90vh;
+}
+
+.font-anonymous {
+    font-family: 'Anonymous Pro', monospace;
+}
+
+.font-Noto {
+    font-family: 'Noto Sans SC', sans-serif;
+}
+
+.wechat-green {
+    background: #7bb32e;
+}

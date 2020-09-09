@@ -1,0 +1,19 @@
+{
+  "name": "my-app",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node app.js"
+  },
+  "author": "morse2work@gmail.com",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "latest",
+    "aws-sdk": "latest",
+    "express": "latest",
+    "body-parser": "latest",
+    "pg": "latest",
+    "cors": "^2.8.5",
+    "node-fetch": "^2.6.0"
+  }
+}
