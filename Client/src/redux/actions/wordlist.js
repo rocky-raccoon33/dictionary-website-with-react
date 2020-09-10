@@ -2,7 +2,7 @@ import { ADD_WORD, FETCH_WORDLIST, DELETE_WORD, UPDATE_WORD } from './types'
 
 const addWord = async (dispatch, payload) => {
     try {
-        const response = await fetch("http://172.31.1.95:8080/words", {
+        const response = await fetch("http://localhost:8080/words", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"

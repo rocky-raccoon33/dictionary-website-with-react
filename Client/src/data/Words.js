@@ -32,7 +32,7 @@ function Words() {
     const deleteAWord = async (id) => {
         try {
             dispatch(deleteWord(id));
-            const response = await fetch(`http://18.140.113.11:8080/words/${id}`,
+            const response = await fetch(`http://localhost/words/${id}`,
                 {
                     method: "DELETE"
                 });

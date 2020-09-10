@@ -26,7 +26,7 @@ function Login() {
     if (!used && name !== '' && password !== '' && password === confirm && agree) {
       dispatch({ type: REGISTER_SUCCESS, payload: { name, password } });
       try {
-        const response = await fetch("http://172.31.1.95:8080/users", {
+        const response = await fetch("http://localhost:8080/users", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
