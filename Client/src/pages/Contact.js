@@ -109,7 +109,7 @@ const Contact = () => {
                                         Spot a bug on the site?
                                     </p>
                                     <a
-                                        href="https://github.com/samanthaming/samanthaming.com/issues/new?assignees=samanthaming&amp;labels=&amp;template=site-bug-report.md&amp;title=%5BBug+Report%5D"
+                                        href="https://github.com/rocky-raccoon94/devmorse-2/issues/new"
                                         rel="noopener noreferrer" target="_blank"
                                         className="text-base text-red-400 font-Inconsolata font-bold">
                                         Submit issue&nbsp;
@@ -123,7 +123,7 @@ const Contact = () => {
                                         Can the site be improved?
                                     </p>
                                     <a
-                                        href="https://github.com/samanthaming/samanthaming.com/issues/new?assignees=samanthaming&amp;labels=&amp;template=site-feature-request.md&amp;title=%5BSite+Feature+Request%5D"
+                                        href="https://github.com/rocky-raccoon94/devmorse-2/issues/new"
                                         rel="noopener noreferrer" target="_blank"
                                         className="text-base text-red-400 font-Inconsolata font-bold">
                                         Request feature&nbsp;
@@ -137,7 +137,7 @@ const Contact = () => {
                                         Got a topic you want me to cover?
                                     </p>
                                     <a
-                                        href="https://github.com/samanthaming/samanthaming.com/issues/new?assignees=samanthaming&amp;labels=&amp;template=topic-suggestion.md&amp;title=%5BTopic+Suggestion%5D"
+                                        href="https://github.com/rocky-raccoon94/devmorse-2/issues/new"
                                         rel="noopener noreferrer" target="_blank"
                                         className="text-base text-red-400 font-Inconsolata font-bold">
                                         Suggest content&nbsp;
