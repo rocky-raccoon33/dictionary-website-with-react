@@ -10,10 +10,12 @@ app.listen(8080, () => {
     console.log("server has started listening on port 8080");
 });
 //Middleware
-
 app.use(cors());
 app.use(express.json());
-
+app.use(function (req, res, next) {
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    next();
+});
 
 
 //Routes//
