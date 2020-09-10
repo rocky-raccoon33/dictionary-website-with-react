@@ -3,15 +3,9 @@ const express = require('express');
 const path = require("path");
 const cors = require('cors');
 const pool = require('./db');
-
-app.use(express.static("../Client/build"));
-app.get("*", (req, res) => {
-    res.sendFile(path.resolve(__dirname, "Client", "build", "index.html"));
-});
-
-
-
 const app = express();
+
+
 app.listen(5000, () => {
     console.log("server has started listening on port 5000");
 });
@@ -40,6 +34,7 @@ app.get("/words", async (req, res) => {
     try {
         const words = await pool.query("select * from words order by id");
         res.json(words.rows);
+        console.log("haha")
     } catch (error) {
         console.error(error.message);
     }
@@ -163,5 +158,16 @@ app.delete("/events/:id", async (req, res) => {
         console.error(error.message);
     }
 })
+
+
+app.use(express.static('../Client//build/'));
+app.get("*", (req, res) => {
+    res.sendFile(path.resolve(__dirname, "Client", "build", "index.html"));
+});
+
+
+
+
+
 
 
