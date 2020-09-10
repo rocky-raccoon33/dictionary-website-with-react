@@ -5,14 +5,16 @@ const cors = require('cors');
 const pool = require('./db');
 const app = express();
 
-app.listen(8080, () => {
-    console.log("server has started listening on port 8080");
-});
+
 
 //Middleware
 
 app.use(cors());
 app.use(express.json());
+app.use(express.static('../Client//build/'));
+app.get("*", (req, res) => {
+    res.sendFile(path.resolve("../Client/build/index.html"));
+});
 
 //Routes//
 //add a word
@@ -159,7 +161,6 @@ app.delete("/events/:id", async (req, res) => {
 })
 
 
-app.use(express.static('../Client//build/'));
-app.get("*", (req, res) => {
-    res.sendFile(path.resolve("../Client/build/index.html"));
+app.listen(8080, () => {
+    console.log("server has started listening on port 8080");
 });

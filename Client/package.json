@@ -1,4 +1,5 @@
 {
+  "proxy": "http://localhost:8080",
   "name": "windmill-dashboard-react",
   "version": "0.4.0",
   "description": "A multi theme, completely accessible, with components and pages examples, (almost) ready for production dashboard.",

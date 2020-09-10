@@ -52,10 +52,7 @@ function Dashboard() {
       datasets: [
         {
           label: 'Added',
-          /**
-           * These colors come from Tailwind CSS palette
-           * https://tailwindcss.com/docs/customizing-colors/#default-color-palette
-           */
+
           backgroundColor: '#0694a2',
           borderColor: '#0694a2',
           data: Object.values(res2),
@@ -102,10 +99,7 @@ function Dashboard() {
       datasets: [
         {
           data: users.map(user => res1[user.name]),
-          /**
-           * These colors come from Tailwind CSS palette
-           * https://tailwindcss.com/docs/customizing-colors/#default-color-palette
-           */
+
           backgroundColor: backgroundColor.splice(0, users.length),
           label: 'Dataset 1',
         },
