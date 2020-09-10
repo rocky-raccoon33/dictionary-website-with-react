@@ -5,9 +5,8 @@ const cors = require('cors');
 const pool = require('./db');
 const app = express();
 
-
-app.listen(5000, () => {
-    console.log("server has started listening on port 5000");
+app.listen(8080, () => {
+    console.log("server has started listening on port 8080");
 });
 
 //Middleware
@@ -34,7 +33,7 @@ app.get("/words", async (req, res) => {
     try {
         const words = await pool.query("select * from words order by id");
         res.json(words.rows);
-        console.log("haha")
+
     } catch (error) {
         console.error(error.message);
     }
@@ -162,12 +161,5 @@ app.delete("/events/:id", async (req, res) => {
 
 app.use(express.static('../Client//build/'));
 app.get("*", (req, res) => {
-    res.sendFile(path.resolve(__dirname, "Client", "build", "index.html"));
+    res.sendFile(path.resolve("../Client/build/index.html"));
 });
-
-
-
-
-
-
-
