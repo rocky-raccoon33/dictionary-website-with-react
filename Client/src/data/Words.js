@@ -47,7 +47,6 @@ function Words() {
     const [pageTable, setPageTable] = useState(1)
 
 
-
     // pagination setup
     const resultsPerPage = 15
     const totalResults = words.length
@@ -55,17 +54,10 @@ function Words() {
     // setup data for every table
     const dataTable = words.slice((pageTable - 1) * resultsPerPage, pageTable * resultsPerPage);
 
-
-    // pagination change control
-
-
     // pagination change control
     function onPageChangeTable(p) {
         setPageTable(p)
-
     }
-
-
 
     // on page change, load new sliced data
     // here you would make another server request for new data
@@ -73,7 +65,7 @@ function Words() {
         //fetch the data from postgres
         const fetchWord = async () => {
             try {
-                const data = await fetch("http://localhost:8080/words");
+                const data = await fetch("http://172.31.1.95:8080/words");
                 const jsonData = await data.json();
                 dispatch(fetchWords(jsonData));
             } catch (error) {

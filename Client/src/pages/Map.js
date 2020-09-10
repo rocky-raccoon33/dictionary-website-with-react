@@ -3,7 +3,8 @@ import { GoogleMap, withScriptjs, withGoogleMap } from 'react-google-maps'
 import mapStyle from '../utils/demo/mapStyle'
 
 
-const key = 'AIzaSyCpiGXR94bRQX4VIcQtHf9s2U-CiZk1qqA'
+const key = 'AIzaSyCwaB41Rj9MwSa3vdAYcCELQT23-SMUhg8';
+
 const state = {
     center: { lat: 31.23, lng: 121.47 },
     zoom: 11
@@ -15,13 +16,11 @@ function Map() {
             defaultCenter={state.center}
             defaultZoom={state.zoom}
             defaultOptions={{ styles: mapStyle }}
-
         />
     )
 }
 
 const WrappedMap = withScriptjs(withGoogleMap(Map));
-
 
 export default function WrapMap() {
     return (

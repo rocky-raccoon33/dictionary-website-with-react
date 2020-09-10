@@ -2,7 +2,7 @@ import { DELETE_EVENT, GET_EVENTS, ADD_EVENT } from './types';
 
 export const addEvent = async (dispatch, payload) => {
     try {
-        const response = await fetch("http://localhost:8080/events", {
+        const response = await fetch("http://172.31.1.95:8080/events", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(payload)
@@ -15,7 +15,7 @@ export const addEvent = async (dispatch, payload) => {
 
 export const deleteEvent = async (dispatch, payload) => {
     try {
-        const response = await fetch(`http://localhost:8080/events/${payload}`,
+        const response = await fetch(`http://172.31.1.95:8080/events/${payload}`,
             { method: "DELETE" }
         )
         dispatch({ type: DELETE_EVENT, payload });
@@ -27,7 +27,7 @@ export const deleteEvent = async (dispatch, payload) => {
 
 export const fetchEvents = async (dispatch) => {
     try {
-        const response = await fetch("http://localhost:8080/events");
+        const response = await fetch("http://172.31.1.95:8080/events");
         const payload = await response.json();
         dispatch({ type: GET_EVENTS, payload })
     } catch (error) {

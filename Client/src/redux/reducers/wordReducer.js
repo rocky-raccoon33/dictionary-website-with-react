@@ -21,7 +21,6 @@ const wordReducer = (state = [], action) => {
                 }
             }
             return res;
-
         default:
             return state;
 

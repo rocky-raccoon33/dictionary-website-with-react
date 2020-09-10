@@ -27,7 +27,7 @@ export default function Result() {
 
     const update = async (word) => {
         try {
-            const response = await fetch(`http://localhost:8080/words/${word.id}`,
+            const response = await fetch(`http://172.31.1.95:8080/words/${word.id}`,
                 {
                     method: "PUT",
                     headers: { "Content-Type": "application/json" },
@@ -45,7 +45,7 @@ export default function Result() {
 
     const deleteAWord = async (id) => {
         try {
-            const response = await fetch(`http://localhost:8080/words/${id}`, {
+            const response = await fetch(`http://172.31.1.95:8080/words/${id}`, {
                 method: 'DELETE'
             });
             dispatch(deleteWord(id));
