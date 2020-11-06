@@ -76,6 +76,7 @@ app.put("/words/:id", async (req, res) => {
         console.error(error.message);
     }
 })
+
 //get a user
 app.get("/users", async (req, res) => {
     try {
@@ -161,7 +162,6 @@ app.delete("/events/:id", async (req, res) => {
         console.error(error.message);
     }
 })
-
 
 app.use(express.static('../Client//build/'));
 app.get("*", (req, res) => {

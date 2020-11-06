@@ -26,7 +26,7 @@ function Login() {
     if (!used && name !== '' && password !== '' && password === confirm && agree) {
       dispatch({ type: REGISTER_SUCCESS, payload: { name, password } });
       try {
-        const response = await fetch("http://18.140.113.11:8080/users", {
+        const response = await fetch("http://54.151.249.232:8080/users", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -55,9 +55,6 @@ function Login() {
         setMsg("You must agree with the privacy policy.")
       }
     }
-
-
-
 
   }
 

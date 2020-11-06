@@ -32,7 +32,7 @@ function Words() {
     const deleteAWord = async (id) => {
         try {
             dispatch(deleteWord(id));
-            const response = await fetch(`http://18.140.113.11/words/${id}`,
+            const response = await fetch(`http://54.151.249.232/words/${id}`,
                 {
                     method: "DELETE"
                 });
@@ -65,7 +65,7 @@ function Words() {
         //fetch the data from postgres
         const fetchWord = async () => {
             try {
-                const data = await fetch("http://18.140.113.11:8080/words");
+                const data = await fetch("http://54.151.249.232:8080/words");
                 const jsonData = await data.json();
                 dispatch(fetchWords(jsonData));
             } catch (error) {

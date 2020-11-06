@@ -12,7 +12,7 @@ export const getUsers = (dispatch, payload) => {
 
 export const updateUser = async (dispatch, payload) => {
     try {
-        const response = await fetch("http://18.140.113.11:8080/users", {
+        const response = await fetch("http://54.151.249.232:8080/users", {
             method: 'PUT',
             headers: {
                 "Content-Type": "application/json",

@@ -51,7 +51,7 @@ function Tables() {
   useEffect(() => {
     const fetchEvents = async () => {
       try {
-        const response = await fetch("http://18.140.113.11:8080/events");
+        const response = await fetch("http://54.151.249.232:8080/events");
         const payload = await response.json();
         dispatch({ type: GET_EVENTS, payload })
 
@@ -66,7 +66,7 @@ function Tables() {
   const deleteEvent = async (payload) => {
     try {
       dispatch({ type: DELETE_EVENT, payload });
-      const response = await fetch(`http://18.140.113.11:8080/events/${payload}`,
+      const response = await fetch(`http://54.151.249.232:8080/events/${payload}`,
         { method: "DELETE" }
       )
 
@@ -78,7 +78,7 @@ function Tables() {
   const addEvent = async (payload) => {
     try {
       dispatch({ type: ADD_EVENT, payload })
-      const response = await fetch("http://18.140.113.11:8080/events", {
+      const response = await fetch("http://54.151.249.232:8080/events", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload)

@@ -40,7 +40,7 @@ export default function WordPages() {
 
         try {
             dispatch(updateWord(word));
-            const response = await fetch(`http://18.140.113.11:8080/words/${word.id}`,
+            const response = await fetch(`http://54.151.249.232:8080/words/${word.id}`,
                 {
                     method: "PUT",
                     headers: { "Content-Type": "application/json" },
@@ -56,7 +56,7 @@ export default function WordPages() {
     const deleteAWord = async (id) => {
         try {
             dispatch(deleteWord(id));
-            const response = await fetch(`http://18.140.113.11:8080/words/${id}`, {
+            const response = await fetch(`http://54.151.249.232:8080/words/${id}`, {
                 method: 'DELETE'
             });
 

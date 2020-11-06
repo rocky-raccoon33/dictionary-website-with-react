@@ -42,7 +42,7 @@ function Login() {
   useEffect(() => {
     const fetchUsers = async () => {
       try {
-        const response = await fetch("http://18.140.113.11:8080/users");
+        const response = await fetch("http://54.151.249.232:8080/users");
         const users = await response.json();
         getUsers(dispatch, users);
       } catch (error) {

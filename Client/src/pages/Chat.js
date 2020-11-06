@@ -23,7 +23,7 @@ function Messages() {
     useEffect(() => {
         const fetchMsgs = async () => {
             try {
-                const response = await fetch("http://18.140.113.11:8080/messages");
+                const response = await fetch("http://54.151.249.232:8080/messages");
                 const payload = await response.json();
                 dispatch({ type: GET_MSGS, payload });
             } catch (error) {

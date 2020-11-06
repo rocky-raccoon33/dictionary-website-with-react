@@ -3,9 +3,6 @@ import allReducers from './reducers/allReducers'
 import { createStore, applyMiddleware, compose } from 'redux';
 import thunk from 'redux-thunk';
 
-
-
-
 function saveToLocalStorage(state) {
     try {
         const serializedState = JSON.stringify(state);
